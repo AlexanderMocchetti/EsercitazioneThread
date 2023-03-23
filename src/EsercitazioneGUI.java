@@ -13,9 +13,9 @@ public class EsercitazioneGUI extends JFrame{
         panelButtons = new JPanel();
         panelButtons.add(startButton);
         panelButtons.add(stopButton);
+        setLayout(new BoxLayout(getContentPane(), BoxLayout.PAGE_AXIS));
         add(label);
         add(panelButtons);
-        setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
         pack();
         setVisible(true);
     }
