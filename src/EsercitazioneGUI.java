@@ -10,6 +10,12 @@ public class EsercitazioneGUI extends JFrame{
         label = new JLabel("Timer: ");
         startButton = new JButton("Start");
         stopButton = new JButton("Stop");
+
+        startButton.addActionListener(e -> {
+            timer = 0;
+
+        });
+
         panelButtons = new JPanel();
         panelButtons.add(startButton);
         panelButtons.add(stopButton);
@@ -18,5 +24,9 @@ public class EsercitazioneGUI extends JFrame{
         add(panelButtons);
         pack();
         setVisible(true);
+    }
+
+    public JLabel getLabel() {
+        return label;
     }
 }

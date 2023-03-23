@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        new EsercitazioneGUI();
+        Timer timer = new Timer();
+        timer.start();
     }
 }
