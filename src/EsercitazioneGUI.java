@@ -8,6 +8,7 @@ public class EsercitazioneGUI extends JFrame{
     private JButton resetButton;
     private Timer timer;
     private boolean over;
+    private int threadCount;
 
     public synchronized boolean isOver() {
         return over;
@@ -18,6 +19,7 @@ public class EsercitazioneGUI extends JFrame{
     }
 
     public EsercitazioneGUI(){
+        threadCount = 0;
         label = new JLabel("Timer: 0");
         startButton = new JButton("Start");
         stopButton = new JButton("Stop");
@@ -27,11 +29,17 @@ public class EsercitazioneGUI extends JFrame{
         panelButtons.add(stopButton);
         panelButtons.add(resetButton);
         startButton.addActionListener(e -> {
-            timer = new Timer(this);
-            setOver(false);
-            timer.start();
+            threadCount++;
+            if(threadCount == 1) {
+                timer = new Timer(this);
+                setOver(false);
+                timer.start();
+            }
         });
-        stopButton.addActionListener(e -> setOver(true));
+        stopButton.addActionListener(e -> {
+            setOver(true);
+            threadCount--;
+        });
         resetButton.addActionListener(e -> label.setText("Timer: 0"));
         setLayout(new BoxLayout(getContentPane(), BoxLayout.PAGE_AXIS));
         add(label);

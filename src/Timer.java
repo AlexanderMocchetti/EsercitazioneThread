@@ -1,5 +1,5 @@
 public class Timer extends Thread{
-    private Integer count;
+    private int count;
     private EsercitazioneGUI gui;
     public Timer(EsercitazioneGUI gui){
         super("Timer");
