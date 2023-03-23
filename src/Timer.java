@@ -1,15 +1,22 @@
 public class Timer extends Thread{
-    private int count;
+    private Integer count;
     private EsercitazioneGUI gui;
-    public Timer(){
+    public Timer(EsercitazioneGUI gui){
         super("Timer");
         count = 0;
-        gui = new EsercitazioneGUI();
+        this.gui = gui;
     }
 
     @Override
     public void run() {
-        BusyWait.delay(1000);
-        count++;
+        try {
+            while(!gui.isOver()) {
+                sleep(1000);
+                count++;
+                gui.getLabel().setText("Timer: " + count);
+            }
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
