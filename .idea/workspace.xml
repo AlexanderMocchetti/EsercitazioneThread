@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b0de747-6d84-4220-96e0-c25629a34db6" name="Changes" comment="Now working">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EsercitazioneGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EsercitazioneGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Timer.java" afterDir="false" />
-    </list>
+    <list default="true" id="7b0de747-6d84-4220-96e0-c25629a34db6" name="Changes" comment="Fixed Multiple thread problem with start button" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679598469563</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed Multiple thread problem with start button">
+      <created>1679599892093</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679599892093</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,7 +113,8 @@
     <MESSAGE value="GUI update" />
     <MESSAGE value="GUI update #1" />
     <MESSAGE value="Now working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now working" />
+    <MESSAGE value="Fixed Multiple thread problem with start button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Multiple thread problem with start button" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
