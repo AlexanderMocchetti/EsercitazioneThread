@@ -47,7 +47,6 @@ public class EsercitazioneGUI extends JFrame{
         pack();
         setVisible(true);
     }
-
     public synchronized JLabel getLabel() {
         return label;
     }

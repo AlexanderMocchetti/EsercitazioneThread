@@ -6,7 +6,6 @@ public class Timer extends Thread{
         count = 0;
         this.gui = gui;
     }
-
     @Override
     public void run() {
         try {
