@@ -1,3 +1,5 @@
+package esercitazione.thread.uno;
+
 public class Timer extends Thread{
     private int count;
     private EsercitazioneGUI gui;

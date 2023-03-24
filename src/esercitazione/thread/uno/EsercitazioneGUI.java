@@ -1,3 +1,5 @@
+package esercitazione.thread.uno;
+
 import javax.swing.*;
 
 public class EsercitazioneGUI extends JFrame{
@@ -49,5 +51,9 @@ public class EsercitazioneGUI extends JFrame{
     }
     public synchronized JLabel getLabel() {
         return label;
+    }
+
+    public static void main(String[] args) {
+        new EsercitazioneGUI();
     }
 }
