@@ -8,23 +8,68 @@ public class EsercitazioneGUI extends JFrame {
     private JButton startRed, startBlue, stopRed, stopBlue;
     private Thread threadRed, threadBlue;
     private JPanel leftPanel, rightPanel, redButtonsPanel, blueButtonsPanel;
+    private Boolean blueThreadOn, redThreadOn;
 
-    public synchronized JLabel getLabelRed(){
-        return labelRed;
+    public synchronized Boolean isThreadOn(Color color){
+        if(Color.RED.equals(color))
+            return redThreadOn;
+        else if(Color.BLUE.equals(color))
+            return blueThreadOn;
+        return null;
     }
 
-    public synchronized JLabel getLabelBlue(){
-        return labelBlue;
+    public synchronized JLabel getLabel(Color color){
+        if (Color.RED.equals(color))
+            return labelRed;
+        else if(Color.BLUE.equals(color))
+            return labelBlue;
+        return null;
+    }
+
+    private synchronized void setRedThreadOn(boolean b){
+        redThreadOn = b;
+    }
+    private synchronized void setBlueThreadOn(boolean b){
+        blueThreadOn = b;
     }
 
     public EsercitazioneGUI(){
-        labelRed = new JLabel("Rosso");
-        labelBlue = new JLabel("Blu");
+        setRedThreadOn(false);
+        setBlueThreadOn(false);
+
+        labelRed = new JLabel("Rosso", SwingConstants.CENTER);
+        labelBlue = new JLabel("Blu", SwingConstants.CENTER);
+
+        labelRed.setOpaque(true);
+        labelBlue.setOpaque(true);
+
+        labelRed.setBackground(Color.WHITE);
+        labelBlue.setBackground(Color.WHITE);
 
         startRed = new JButton("Start");
         startBlue = new JButton("Start");
         stopRed = new JButton("Stop");
         stopBlue = new JButton("Stop");
+
+        startRed.addActionListener(e -> {
+            if(!isThreadOn(Color.RED)) {
+                threadRed = new ColorManager(this, Color.RED);
+                setRedThreadOn(true);
+                threadRed.start();
+            }
+        });
+
+        startBlue.addActionListener(e -> {
+            if(!isThreadOn(Color.BLUE)) {
+                threadBlue = new ColorManager(this, Color.BLUE);
+                setBlueThreadOn(true);
+                threadBlue.start();
+            }
+        });
+
+        stopBlue.addActionListener(e -> setBlueThreadOn(false));
+        stopRed.addActionListener(e -> setRedThreadOn(false));
+
 
         leftPanel = new JPanel();
         rightPanel = new JPanel();
