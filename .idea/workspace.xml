@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b0de747-6d84-4220-96e0-c25629a34db6" name="Changes" comment="Removed thread count">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/esercitazione/thread/due/ColorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercitazione/thread/due/ColorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/esercitazione/thread/due/EsercitazioneGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercitazione/thread/due/EsercitazioneGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/esercitazione/thread/uno/EsercitazioneGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esercitazione/thread/uno/EsercitazioneGUI.java" afterDir="false" />
-    </list>
+    <list default="true" id="7b0de747-6d84-4220-96e0-c25629a34db6" name="Changes" comment="Es 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679668990199</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Es 2">
+      <created>1679743795033</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679743795033</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,7 +145,8 @@
     <MESSAGE value="Gui Update #3" />
     <MESSAGE value="Project restructuring" />
     <MESSAGE value="Removed thread count" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed thread count" />
+    <MESSAGE value="Es 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Es 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
